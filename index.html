@@ -1,314 +1,717 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Divine Hair YV Collection</title>
+<title>Divine Hair YV Collection</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<style>
+:root{
+  --rose:#e7c4cc;
+  --rose-dark:#a96f7d;
+  --champagne:#c9a45c;
+  --cream:#fffaf7;
+  --beige:#f5e9e5;
+  --text:#49383c;
+  --white:#ffffff;
+}
 
-    body {
-      font-family: Georgia, serif;
-      background: #080808;
-      color: #ffffff;
-    }
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
 
-    header {
-      padding: 25px 7%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #b8954b;
-    }
+html{
+  scroll-behavior:smooth;
+}
 
-    .logo {
-      color: #d4af5a;
-      font-size: 20px;
-      font-weight: bold;
-      letter-spacing: 3px;
-    }
+body{
+  font-family:Georgia,"Times New Roman",serif;
+  background:var(--cream);
+  color:var(--text);
+  line-height:1.7;
+}
 
-    nav {
-      display: flex;
-      gap: 25px;
-    }
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,250,247,.96);
+  border-bottom:1px solid #ead8d7;
+  padding:18px 6%;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-size: 15px;
-    }
+.header-inner{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
 
-    nav a:hover {
-      color: #d4af5a;
-    }
+.logo{
+  color:var(--rose-dark);
+  font-size:20px;
+  font-weight:bold;
+  letter-spacing:2px;
+}
 
-    .hero {
-      min-height: 80vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 80px 20px;
-      background:
-        radial-gradient(circle at center, #272016 0%, #080808 55%);
-    }
+.logo span{
+  color:var(--champagne);
+}
 
-    .hero-content {
-      max-width: 850px;
-    }
+nav{
+  display:flex;
+  gap:22px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
 
-    .small-title {
-      color: #d4af5a;
-      letter-spacing: 5px;
-      font-size: 13px;
-      margin-bottom: 25px;
-    }
+nav a{
+  color:var(--text);
+  text-decoration:none;
+  font-size:14px;
+}
 
-    h1 {
-      font-size: clamp(45px, 7vw, 85px);
-      line-height: 1;
-      color: #d4af5a;
-      margin-bottom: 25px;
-    }
+nav a:hover{
+  color:var(--rose-dark);
+}
 
-    .hero p {
-      font-size: 20px;
-      line-height: 1.7;
-      color: #eeeeee;
-    }
+.hero{
+  min-height:88vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:80px 20px;
+  background:
+    radial-gradient(circle at center,#ffffff 0%,transparent 35%),
+    linear-gradient(135deg,#fffaf7,#f4dfe3,#fffaf7);
+}
 
-    .button {
-      display: inline-block;
-      margin-top: 35px;
-      padding: 16px 30px;
-      background: #d4af5a;
-      color: #080808;
-      text-decoration: none;
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
+.hero-content{
+  max-width:900px;
+}
 
-    .section {
-      padding: 90px 8%;
-      text-align: center;
-    }
+.label{
+  color:var(--champagne);
+  font-size:12px;
+  letter-spacing:5px;
+  font-weight:bold;
+  margin-bottom:20px;
+}
 
-    .section h2 {
-      font-size: 45px;
-      color: #d4af5a;
-      margin: 15px 0 25px;
-    }
+.hero h1{
+  font-size:clamp(48px,8vw,90px);
+  line-height:1;
+  margin-bottom:28px;
+  color:var(--text);
+}
 
-    .collections {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-      margin-top: 50px;
-    }
+.hero h1 span{
+  color:var(--rose-dark);
+}
 
-    .card {
-      border: 1px solid #80652d;
-      padding: 35px 20px;
-      background: #101010;
-    }
+.hero p{
+  max-width:720px;
+  margin:auto;
+  font-size:19px;
+  color:#6b585d;
+}
 
-    .card h3 {
-      color: #d4af5a;
-      font-size: 22px;
-      margin-bottom: 15px;
-    }
+.buttons{
+  margin-top:35px;
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+}
 
-    .card p {
-      line-height: 1.6;
-      color: #dddddd;
-    }
+.button{
+  display:inline-block;
+  padding:15px 28px;
+  border-radius:40px;
+  text-decoration:none;
+  font-weight:bold;
+  letter-spacing:1px;
+  background:var(--rose-dark);
+  color:white;
+  transition:.3s;
+}
 
-    .dark-section {
-      background: #111111;
-    }
+.button:hover{
+  transform:translateY(-3px);
+  background:#925e6b;
+}
 
-    .contact {
-      border-top: 1px solid #80652d;
-    }
+.button.gold{
+  background:var(--champagne);
+  color:#403321;
+}
 
-    footer {
-      padding: 40px 20px;
-      text-align: center;
-      border-top: 1px solid #80652d;
-      color: #d4af5a;
-      line-height: 1.8;
-    }
+.section{
+  padding:90px 7%;
+  text-align:center;
+}
 
-    @media (max-width: 800px) {
+.inner{
+  max-width:1200px;
+  margin:auto;
+}
 
-      header {
-        flex-direction: column;
-        gap: 20px;
-      }
+.section h2{
+  font-size:clamp(35px,5vw,55px);
+  color:var(--text);
+  margin:10px 0 20px;
+}
 
-      nav {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
+.intro{
+  max-width:750px;
+  margin:0 auto 45px;
+  color:#6b585d;
+}
 
-      .collections {
-        grid-template-columns: 1fr;
-      }
+.collections{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+  margin-top:45px;
+}
 
-      .section h2 {
-        font-size: 35px;
-      }
-    }
-  </style>
+.card{
+  background:white;
+  border:1px solid #ead7d8;
+  border-radius:18px;
+  padding:38px 25px;
+  box-shadow:0 12px 35px rgba(80,50,60,.08);
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+}
+
+.icon{
+  font-size:38px;
+  margin-bottom:15px;
+}
+
+.card h3{
+  color:var(--rose-dark);
+  font-size:22px;
+  margin-bottom:12px;
+}
+
+.card p{
+  color:#6b585d;
+}
+
+.quality{
+  background:var(--beige);
+}
+
+.quality-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+  margin-top:45px;
+}
+
+.quality-box{
+  background:rgba(255,255,255,.8);
+  border:1px solid #e4d0ca;
+  border-radius:18px;
+  padding:35px 25px;
+}
+
+.quality-box h3{
+  color:var(--rose-dark);
+  margin-bottom:12px;
+}
+
+.preorders{
+  background:linear-gradient(135deg,#f7e5e7,#fffaf7);
+}
+
+.preorder-box{
+  max-width:850px;
+  margin:auto;
+  background:white;
+  border:1px solid #e2c5ca;
+  border-radius:22px;
+  padding:45px 30px;
+  box-shadow:0 12px 35px rgba(80,50,60,.07);
+}
+
+.preorder-box h3{
+  color:var(--rose-dark);
+  font-size:28px;
+  margin-bottom:15px;
+}
+
+.preorder-box p{
+  margin-bottom:12px;
+}
+
+.payment-grid{
+  max-width:900px;
+  margin:45px auto 0;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:25px;
+}
+
+.payment-box{
+  background:white;
+  border:1px solid #ead7d8;
+  border-radius:18px;
+  padding:30px;
+}
+
+.payment-box h3{
+  color:var(--rose-dark);
+  margin-bottom:15px;
+  font-size:22px;
+}
+
+.academy{
+  background:#f2e0e2;
+}
+
+.academy-box{
+  max-width:850px;
+  margin:auto;
+  background:white;
+  border:1px solid #dfc5ca;
+  border-radius:25px;
+  padding:50px 30px;
+}
+
+.badge{
+  display:inline-block;
+  background:var(--champagne);
+  color:#403321;
+  padding:8px 18px;
+  border-radius:30px;
+  font-size:11px;
+  font-weight:bold;
+  letter-spacing:1px;
+  margin-bottom:20px;
+}
+
+.contact{
+  background:var(--cream);
+}
+
+.contact-info{
+  margin:30px auto;
+  max-width:650px;
+}
+
+.contact-info p{
+  margin:8px 0;
+}
+
+.whatsapp{
+  background:#b9828c;
+}
+
+footer{
+  background:#49383c;
+  color:white;
+  text-align:center;
+  padding:45px 20px;
+}
+
+footer strong{
+  color:var(--rose);
+  letter-spacing:2px;
+}
+
+footer small{
+  color:#ead9db;
+}
+
+@media(max-width:800px){
+
+  header{
+    position:relative;
+  }
+
+  .header-inner{
+    flex-direction:column;
+  }
+
+  nav{
+    gap:13px;
+  }
+
+  .hero{
+    min-height:80vh;
+  }
+
+  .hero h1{
+    font-size:52px;
+  }
+
+  .hero p{
+    font-size:17px;
+  }
+
+  .collections,
+  .quality-grid,
+  .payment-grid{
+    grid-template-columns:1fr;
+  }
+
+  .section{
+    padding:70px 20px;
+  }
+
+  .section h2{
+    font-size:38px;
+  }
+}
+</style>
 </head>
 
 <body>
 
 <header>
+<div class="header-inner">
 
-  <div class="logo">
-    DIVINE HAIR YV COLLECTION
-  </div>
+<div class="logo">
+DIVINE HAIR <span>YV</span> COLLECTION
+</div>
 
-  <nav>
-    <a href="#accueil">Accueil</a>
-    <a href="#collections">Collections</a>
-    <a href="#academy">Academy</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<nav>
+<a href="#accueil">Accueil</a>
+<a href="#collections">Collections</a>
+<a href="#precommandes">Précommandes</a>
+<a href="#paiements">Paiements</a>
+<a href="#academy">Academy</a>
+<a href="#contact">Contact</a>
+</nav>
 
+</div>
 </header>
 
 <section id="accueil" class="hero">
 
-  <div class="hero-content">
+<div class="hero-content">
 
-    <div class="small-title">
-      DIVINE HAIR YV COLLECTION
-    </div>
+<div class="label">
+LUXURY HAIR COLLECTION
+</div>
 
-    <h1>
-      L'élégance<br>
-      commence ici.
-    </h1>
+<h1>
+L'élégance<br>
+<span>commence ici.</span>
+</h1>
 
-    <p>
-      Découvrez notre univers de perruques,
-      cheveux et créations personnalisées
-      sélectionnés avec soin.
-    </p>
+<p>
+Découvrez l'univers de Divine Hair YV Collection :
+perruques, cheveux et créations personnalisées
+sélectionnés avec soin pour une beauté élégante et raffinée.
+</p>
 
-    <a href="#collections" class="button">
-      DÉCOUVRIR LA COLLECTION
-    </a>
+<div class="buttons">
 
-  </div>
+<a href="#collections" class="button">
+VOIR LA COLLECTION
+</a>
 
+<a
+href="https://wa.me/33774129419"
+class="button gold"
+target="_blank">
+COMMANDER SUR WHATSAPP
+</a>
+
+</div>
+
+</div>
 </section>
 
 <section id="collections" class="section">
 
-  <div class="small-title">
-    NOS COLLECTIONS
-  </div>
+<div class="inner">
 
-  <h2>
-    Divine Hair YV Collection
-  </h2>
+<div class="label">
+NOS COLLECTIONS
+</div>
 
-  <div class="collections">
+<h2>
+Des cheveux d'exception
+</h2>
 
-    <div class="card">
-      <h3>PERRUQUES</h3>
-      <p>
-        Découvrez notre sélection de perruques
-        haut de gamme et nos différentes textures.
-      </p>
-    </div>
+<p class="intro">
+Nous proposons différentes origines et textures de cheveux
+ainsi que des créations personnalisées selon vos envies.
+</p>
 
-    <div class="card">
-      <h3>PERSONNALISATION</h3>
-      <p>
-        Des créations personnalisées selon
-        votre style, vos envies et votre personnalité.
-      </p>
-    </div>
+<div class="collections">
 
-    <div class="card">
-      <h3>CHEVEUX VIETNAMIENS</h3>
-      <p>
-        Une sélection de cheveux choisis avec
-        attention pour nos collections.
-      </p>
-    </div>
+<div class="card">
+<div class="icon">🇻🇳</div>
+<h3>CHEVEUX VIETNAMIENS</h3>
+<p>
+Cheveux vietnamiens sélectionnés avec soin,
+disponibles selon les textures et longueurs proposées.
+</p>
+</div>
 
-  </div>
+<div class="card">
+<div class="icon">🇮🇳</div>
+<h3>CHEVEUX INDIENS</h3>
+<p>
+Des textures indiennes élégantes pour des créations
+naturelles et personnalisées.
+</p>
+</div>
 
+<div class="card">
+<div class="icon">🇧🇷</div>
+<h3>CHEVEUX BRÉSILIENS</h3>
+<p>
+Une sélection de textures brésiliennes disponible
+selon les modèles et les demandes.
+</p>
+</div>
+
+</div>
+</div>
 </section>
 
-<section id="academy" class="section dark-section">
+<section class="section quality">
 
-  <div class="small-title">
-    DIVINE HAIR ACADEMY
-  </div>
+<div class="inner">
 
-  <h2>
-    Apprenez. Créez. Perfectionnez-vous.
-  </h2>
+<div class="label">
+NOTRE SIGNATURE
+</div>
 
-  <p>
-    Découvrez nos formations dédiées à la pose,
-    la personnalisation et au perfectionnement
-    dans l'univers de la perruque.
-  </p>
+<h2>
+La qualité avant tout
+</h2>
 
+<div class="quality-grid">
+
+<div class="quality-box">
+<h3>✨ Sélection</h3>
+<p>
+Des cheveux choisis avec attention pour nos collections.
+</p>
+</div>
+
+<div class="quality-box">
+<h3>💎 Personnalisation</h3>
+<p>
+Votre création peut être adaptée à vos envies,
+selon le modèle choisi.
+</p>
+</div>
+
+<div class="quality-box">
+<h3>👑 Élégance</h3>
+<p>
+Une image raffinée et un accompagnement personnalisé.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="precommandes" class="section preorders">
+
+<div class="inner">
+
+<div class="label">
+COMMANDES PERSONNALISÉES
+</div>
+
+<h2>
+Précommandes sur mesure
+</h2>
+
+<div class="preorder-box">
+
+<h3>
+Votre création, selon vos envies.
+</h3>
+
+<p>
+Certaines créations sont disponibles uniquement sur précommande
+afin de permettre une personnalisation selon vos souhaits.
+</p>
+
+<p>
+<strong>⏳ Délai de précommande :</strong>
+le délai dépend du modèle, de la longueur, de la texture,
+de la personnalisation et de la disponibilité auprès du fournisseur.
+</p>
+
+<p>
+Le délai estimatif est communiqué avant la validation de la commande.
+</p>
+
+<div class="buttons">
+
+<a
+href="https://wa.me/33774129419"
+class="button whatsapp"
+target="_blank">
+DEMANDER UNE PRÉCOMMANDE
+</a>
+
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="paiements" class="section">
+
+<div class="inner">
+
+<div class="label">
+MOYENS DE PAIEMENT
+</div>
+
+<h2>
+Un paiement adapté à votre destination
+</h2>
+
+<div class="payment-grid">
+
+<div class="payment-box">
+
+<h3>🇫🇷 France</h3>
+
+<p>
+💳 Carte bancaire<br>
+💙 PayPal<br>
+🏦 Virement bancaire<br>
+🛍️ Klarna
+</p>
+
+</div>
+
+<div class="payment-box">
+
+<h3>🌍 Afrique</h3>
+
+<p>
+🟠 Orange Money<br>
+🟡 MTN Mobile Money<br>
+💸 RIA<br>
+Solutions disponibles selon le pays
+</p>
+
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="academy" class="section academy">
+
+<div class="academy-box">
+
+<div class="badge">
+OUVERTURE PROCHAINEMENT
+</div>
+
+<div class="label">
+DIVINE HAIR ACADEMY
+</div>
+
+<h2>
+Apprenez. Créez. Perfectionnez-vous.
+</h2>
+
+<p>
+Une nouvelle aventure se prépare.
+Divine Hair Academy proposera prochainement
+des formations autour de l'univers de la perruque,
+de la personnalisation et de la création capillaire.
+</p>
+
+<div class="buttons">
+
+<a
+href="https://wa.me/33774129419"
+class="button"
+target="_blank">
+ÊTRE INFORMÉE
+</a>
+
+</div>
+
+</div>
 </section>
 
 <section id="contact" class="section contact">
 
-  <div class="small-title">
-    CONTACT
-  </div>
+<div class="inner">
 
-  <h2>
-    Parlons de votre projet
-  </h2>
+<div class="label">
+CONTACT
+</div>
 
-  <p>
-    Téléphone : 07 74 12 94 19
-  </p>
+<h2>
+Parlons de votre projet
+</h2>
 
-  <p>
-    Email : divinehairyvcollection@gmail.com
-  </p>
+<div class="contact-info">
 
-  <a
-    href="https://divinehairyvcollection.com"
-    class="button"
-  >
-    VISITER NOTRE SITE
-  </a>
+<p>
+📞 <strong>+33 7 74 12 94 19</strong>
+</p>
 
+<p>
+✉️ <strong>divinehairyvcollection@gmail.com</strong>
+</p>
+
+<p>
+🇫🇷 France • 🌍 Afrique
+</p>
+
+</div>
+
+<div class="buttons">
+
+<a
+href="https://wa.me/33774129419"
+class="button whatsapp"
+target="_blank">
+💬 CONTACTER DIVINE HAIR
+</a>
+
+</div>
+
+</div>
 </section>
 
 <footer>
 
-  <strong>DIVINE HAIR YV COLLECTION</strong>
+<strong>
+DIVINE HAIR YV COLLECTION
+</strong>
 
-  <br>
+<br><br>
 
-  Luxury Hair • Beauté • Confiance
+Perruques • Cheveux • Personnalisation • Beauté
 
-  <br><br>
+<br><br>
 
-  ©️ 2026 Divine Hair YV Collection
+<small>
+© 2026 Divine Hair YV Collection — Tous droits réservés.
+</small>
 
 </footer>
 
