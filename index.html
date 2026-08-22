@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Divine Hair YV Collection</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Georgia, serif;
+      background: #080808;
+      color: #ffffff;
+    }
+
+    header {
+      padding: 25px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #b8954b;
+    }
+
+    .logo {
+      color: #d4af5a;
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 3px;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      color: #d4af5a;
+    }
+
+    .hero {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 20px;
+      background:
+        radial-gradient(circle at center, #272016 0%, #080808 55%);
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .small-title {
+      color: #d4af5a;
+      letter-spacing: 5px;
+      font-size: 13px;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-size: clamp(45px, 7vw, 85px);
+      line-height: 1;
+      color: #d4af5a;
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      line-height: 1.7;
+      color: #eeeeee;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 35px;
+      padding: 16px 30px;
+      background: #d4af5a;
+      color: #080808;
+      text-decoration: none;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .section {
+      padding: 90px 8%;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 45px;
+      color: #d4af5a;
+      margin: 15px 0 25px;
+    }
+
+    .collections {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin-top: 50px;
+    }
+
+    .card {
+      border: 1px solid #80652d;
+      padding: 35px 20px;
+      background: #101010;
+    }
+
+    .card h3 {
+      color: #d4af5a;
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      line-height: 1.6;
+      color: #dddddd;
+    }
+
+    .dark-section {
+      background: #111111;
+    }
+
+    .contact {
+      border-top: 1px solid #80652d;
+    }
+
+    footer {
+      padding: 40px 20px;
+      text-align: center;
+      border-top: 1px solid #80652d;
+      color: #d4af5a;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 800px) {
+
+      header {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .collections {
+        grid-template-columns: 1fr;
+      }
+
+      .section h2 {
+        font-size: 35px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="logo">
+    DIVINE HAIR YV COLLECTION
+  </div>
+
+  <nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#collections">Collections</a>
+    <a href="#academy">Academy</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+</header>
+
+<section id="accueil" class="hero">
+
+  <div class="hero-content">
+
+    <div class="small-title">
+      DIVINE HAIR YV COLLECTION
+    </div>
+
+    <h1>
+      L'élégance<br>
+      commence ici.
+    </h1>
+
+    <p>
+      Découvrez notre univers de perruques,
+      cheveux et créations personnalisées
+      sélectionnés avec soin.
+    </p>
+
+    <a href="#collections" class="button">
+      DÉCOUVRIR LA COLLECTION
+    </a>
+
+  </div>
+
+</section>
+
+<section id="collections" class="section">
+
+  <div class="small-title">
+    NOS COLLECTIONS
+  </div>
+
+  <h2>
+    Divine Hair YV Collection
+  </h2>
+
+  <div class="collections">
+
+    <div class="card">
+      <h3>PERRUQUES</h3>
+      <p>
+        Découvrez notre sélection de perruques
+        haut de gamme et nos différentes textures.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>PERSONNALISATION</h3>
+      <p>
+        Des créations personnalisées selon
+        votre style, vos envies et votre personnalité.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>CHEVEUX VIETNAMIENS</h3>
+      <p>
+        Une sélection de cheveux choisis avec
+        attention pour nos collections.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="academy" class="section dark-section">
+
+  <div class="small-title">
+    DIVINE HAIR ACADEMY
+  </div>
+
+  <h2>
+    Apprenez. Créez. Perfectionnez-vous.
+  </h2>
+
+  <p>
+    Découvrez nos formations dédiées à la pose,
+    la personnalisation et au perfectionnement
+    dans l'univers de la perruque.
+  </p>
+
+</section>
+
+<section id="contact" class="section contact">
+
+  <div class="small-title">
+    CONTACT
+  </div>
+
+  <h2>
+    Parlons de votre projet
+  </h2>
+
+  <p>
+    Téléphone : 07 74 12 94 19
+  </p>
+
+  <p>
+    Email : divinehairyvcollection@gmail.com
+  </p>
+
+  <a
+    href="https://divinehairyvcollection.com"
+    class="button"
+  >
+    VISITER NOTRE SITE
+  </a>
+
+</section>
+
+<footer>
+
+  <strong>DIVINE HAIR YV COLLECTION</strong>
+
+  <br>
+
+  Luxury Hair • Beauté • Confiance
+
+  <br><br>
+
+  ©️ 2026 Divine Hair YV Collection
+
+</footer>
+
+</body>
+</html>
